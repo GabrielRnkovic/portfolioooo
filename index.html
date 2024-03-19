@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rnkovic</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="brand-title"> <b>Gabriel Rnkovic</b></div>
+        <a href="#" class="toggle-button">
+          <span class="barR"></span>
+          <span class="barR"></span>
+          <span class="barR"></span>    
+        </a>
+        <div class="navbar-links">
+          <ul>
+            <li><a href="#AB">About</a></li>
+            <li><a href="#PS">Projects</a></li>
+            <li><a href="#CM">Contact</a></li>
+            <li><a href="#GL">Gallery</a></li>
+          </ul>
+        </div>
+      </nav>
+    <div class="section1">
+        <h2>Gabriel Rnkovic</h2>
+        <h3>Web Developer</h3>
+        <a href="#PS" class="cta"> <b>Projects</b></a>
+        <div class="icons">
+           <a href="https://github.com/GabrielRnkovic" class="GithubA"><img src="Bilder/githubb.png" alt="Github" class="Github" height="125px;"></a> 
+           <a href="mailto:gabriel@rnkovic.com" class="MailA"> <img src="Bilder/pngwing.com(1).png" alt="Mail" class="Mail"></a>
+            <a href="" class="tlfA"><img src="Bilder/tlf.png" alt="Telefon" class="tlf"></a>
+        </div>
+    </div>
+    <div class="section2">
+        <h1 id="PS">Projects</h1>
+        <div class="blue"></div>
+        <div class="p12">
+        <div class="p1">
+            <img src="Bilder/rps.jpg" alt="people playing rock paper scissors">
+            <h2>Ranked rps</h2>
+            <p>Lorem ipsum is simply dummy text of 
+                the printing and typesetting industry. 
+                Lorem ipsum has been the industry 
+                Standard dummy text since the 1500s</p>
+                <a href="#">More</a>
+        </div>
+        <div class="p2">
+            <img src="Bilder/pw.jpg" alt="people playing rock paper scissors" style="max-width: 355px;">
+            <h2>PlatinumWind</h2>
+            <p>Lorem ipsum is simply dummy text of 
+                the printing and typesetting industry. 
+                Lorem ipsum has been the industry 
+                Standard dummy text since the 1500s</p>
+                <a href="#">More</a>
+        </div>
+        <div class="p2">
+            <img src="Bilder/Navnløs.jpg" alt="people playing rock paper scissors" style="max-width: 355px;">
+            <h2>Image editor</h2>
+            <p>Lorem ipsum is simply dummy text of 
+                the printing and typesetting industry. 
+                Lorem ipsum has been the industry 
+                Standard dummy text since the 1500s</p>
+                <a href="#">More</a>
+        </div>
+    </div>
+</div>
+    <div class="section3">
+        <h1 id="AB">About me</h1>
+        <div class="blue"></div>
+        <div class="aboutme">
+        <div class="text">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                Lorem Ipsum has been the in <br> <br> 
+                dustry's standard dummy text ever since the 1500s,
+                when an unknown printer took a galley of type and scrambled it to make a type 
+                specimen book. It has survived not only five centuries, <br> but also the leap into electronic 
+                typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+                release of Letraset sheets containing Lo
+                <br> <br> 
+                rem Ipsum passages, and more recently with
+                desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+</p>
+        </div>
+        <div class="img">
+            <img src="Bilder/_L2A7798.JPG" alt="">
+        </div>
+    </div>
+    </div>
+    <div class="section4">
+        <h1 id="CM">Contact me</h1>
+        <div class="blue"></div>
+        <div class="form">
+            <form action="#">
+                <input type="text" required placeholder="Name" id="name"> <br>
+                <input type="mail" required placeholder="Mail" id="mail"> <br>
+                <textarea name="melding" id="msg" cols="30" rows="5" placeholder="Message"></textarea> <br>
+                <button id="btn">Submit</button>
+            </form>
+        </div>
+    </div>
+    <div class="section5">
+        <h1 id="SK">Skills</h1>
+        <div class="blue"></div>
+        <div class="skills">
+            <p>HTML</p>
+            <div class="bar"><span class="bar1">90%</span></div>
+            <p>CSS</p>
+            <div class="bar"><span class="bar2">80%</span></div>
+            <p>Javascript</p>
+            <div class="bar"><span class="bar3">70%</span></div>
+            <p>Design</p>   
+            <div class="bar"><span class="bar4">80%</span></div>
+        </div>
+    </div>
+    <div class="section6">
+        <h1 id="GL">Gallery</h1>
+        <div class="blue"></div>
+        <div class="imgslider">
+            <img src="Bilder/natur23.jpg" alt="Bilde av natur">
+        </div>
+    </div>
+    <div class="footer">
+        <p>© 2024 Gabriel Rnkovic </p>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js">
+
+        const form = document.querySelector("form");
+        const name = document.getElementById("name");
+        const mail = document.getElementById("mail");
+        const msg = document.getElementById("msg");
+
+
+        function sendMail() {
+        
+        const bodyMsg = "Full Name: ${name.value}<br> Mail: ${mail.value}<br> Msg: ${msg.value}";
+
+        Email.send({
+            Host : "smtp.elasticemail.com",
+            Username : "rgabi2899@gmail.com",
+            Password : "E1FEDD29AF44006CDDD89945019F171CF705",
+            To : 'gabrielrnkovic@gmail.com',
+            From : "gabrielrnkovic@gmail.com",
+            Body : bodyMsg
+        }).then(
+        message => alert(message)
+        );
+
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            sendEmail();
+        });
+
+    }
+        
+    </script>
+</body>
+</html>
